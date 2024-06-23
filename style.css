@@ -113,6 +113,7 @@ ul{
     border: none;
     background: var(--skin-color);
     transition:all 0.3s ease;
+    margin-bottom:100px;
 }
 .btn:hover{
     transform: scale(1.05);
@@ -340,8 +341,8 @@ h3.my-profession{
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right:-6px;
-    bottom:40px;
+    right:-10px;
+    bottom:65px;
 }
 .home-img::before{
     content: '';
@@ -687,6 +688,13 @@ h3.my-profession{
         max-width: 100%;
     }
     .home .home-img{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home-img::before{
+        display: none;
+    }
+    .home-img::after{
         display: none;
     }
 }
@@ -696,12 +704,19 @@ h3.my-profession{
     .contact .contact-info-item,
     .portfolio .portfolio-item,
     .service .service-item,
+    .home .home-img,
     .about .about-content .education,
     .about .about-content .experience,
     .about .about-content .skills,
     .about .about-content .personal-info{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+    .home-img::before{
+        display: none;
+    }
+    .home-img::after{
+        display: none;
     }
 }
 @media (max-width:360px){
